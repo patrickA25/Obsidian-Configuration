@@ -27,6 +27,12 @@ https://angel-rs.github.io/css-color-filter-generator
   --neutral-pen-black: #272727;
   --neutral-pen-black-trans: #27272722;
 
+  /*grid colors */
+  --neutral-grid-black-trans: #27272722;
+  --neutral-grid-white-trans: #fdfdfd45;
+  --neutral-grid-blue-trans: #3f76ed56;
+  --neutral-grid-green-trans: #10df5c67;
+
   /* Page Colors */
   --page-white: #ffffff;
   --page-manila: #f3deaf;
@@ -154,7 +160,8 @@ https://angel-rs.github.io/css-color-filter-generator
   background-color: var(--page-blue);
 }
 
-/* Adds a grid layout on page background */
+/* -------------------------- Add Grid Layout Style ------------------------- */
+/* Adds a grid layout on page background that matches pen color */
 .page-grid {
   background-image: linear-gradient(
       0deg,
@@ -169,7 +176,83 @@ https://angel-rs.github.io/css-color-filter-generator
       var(--accent-color-trans) calc(var(--grid-size) - 2px),
       var(--accent-color-trans) calc(var(--grid-size) - 1px),
       transparent var(--grid-size)
-    );
+    );  
+  background-size: var(--grid-size) var(--grid-size);
+}
+
+/* Adds a grid layout on page background that matches black */
+.page-grid-black {
+  background-image: linear-gradient(
+      0deg,
+      transparent 0px,
+      var(--neutral-grid-black-trans) 1px,
+      var(--neutral-grid-black-trans) 2px,
+      transparent 3px
+    ),
+    linear-gradient(
+      90deg,
+      transparent calc(var(--grid-size) - 3px),
+      var(--neutral-grid-black-trans) calc(var(--grid-size) - 2px),
+      var(--neutral-grid-black-trans) calc(var(--grid-size) - 1px),
+      transparent var(--grid-size)
+    );  
+  background-size: var(--grid-size) var(--grid-size);
+}
+
+/* Adds a grid layout on page background that matches white */
+.page-grid-white {
+  background-image: linear-gradient(
+      0deg,
+      transparent 0px,
+      var(--neutral-grid-white-trans) 1px,
+      var(--neutral-grid-white-trans) 2px,
+      transparent 3px
+    ),
+    linear-gradient(
+      90deg,
+      transparent calc(var(--grid-size) - 3px),
+      var(--neutral-grid-white-trans) calc(var(--grid-size) - 2px),
+      var(--neutral-grid-white-trans) calc(var(--grid-size) - 1px),
+      transparent var(--grid-size)
+    );  
+  background-size: var(--grid-size) var(--grid-size);
+}
+
+/* Adds a grid layout on page background that matches blue */
+.page-grid-blue {
+  background-image: linear-gradient(
+      0deg,
+      transparent 0px,
+      var(--neutral-grid-blue-trans) 1px,
+      var(--neutral-grid-blue-trans) 2px,
+      transparent 3px
+    ),
+    linear-gradient(
+      90deg,
+      transparent calc(var(--grid-size) - 3px),
+      var(--neutral-grid-blue-trans) calc(var(--grid-size) - 2px),
+      var(--neutral-grid-blue-trans) calc(var(--grid-size) - 1px),
+      transparent var(--grid-size)
+    );  
+  background-size: var(--grid-size) var(--grid-size);
+}
+
+/* Adds a grid layout on page background that matches green */
+.page-grid-green {
+  background-image: linear-gradient(
+      0deg,
+      transparent 0px,
+      var(--neutral-grid-green-trans) 1px,
+      var(--neutral-grid-green-trans) 2px,
+      transparent 3px
+    ),
+    linear-gradient(
+      90deg,
+      transparent calc(var(--grid-size) - 3px),
+      var(--neutral-grid-green-trans) calc(var(--grid-size) - 2px),
+      var(--neutral-grid-green-trans) calc(var(--grid-size) - 1px),
+      transparent var(--grid-size)
+    );  
   background-size: var(--grid-size) var(--grid-size);
 }
 
